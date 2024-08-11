@@ -8,9 +8,9 @@ import org.smartbear.utils.TimeCheckerUtil;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BritishTimeToSpokenForm {
+public class TimeToBritishSpokenForm {
 
-    private static final Logger log = LoggerFactory.getLogger(BritishTimeToSpokenForm.class);
+    private static final Logger log = LoggerFactory.getLogger(TimeToBritishSpokenForm.class);
     private static final Map<Integer,String> minutesLookUp = new HashMap<>();
     private static final Map<Integer,String> hourLookup = new HashMap<>();
     private static final String TIME_EMPTY_OR_BLANK_STRING = "Input cannot be empty or blank";
@@ -79,7 +79,7 @@ public class BritishTimeToSpokenForm {
         hourLookup.put(23,"twenty three");
     }
 
-    public  String getSpokenFormOfBritishTime(String time) throws InvalidTimeException {
+    public  String getBritishSpokenFormOfTime(String time) throws InvalidTimeException {
         StringBuilder sb = new StringBuilder();
 
         if(time == null || time.isBlank()){

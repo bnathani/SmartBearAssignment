@@ -18,7 +18,7 @@
         <appender-ref ref="CONSOLE" />
     </root>
 
-    <logger name="org.smartbear.app.BritishTimeToSpokenForm" level="debug" additivity="false">
+    <logger name="org.smartbear.app.TimeToBritishSpokenForm" level="debug" additivity="false">
         <appender-ref ref="FILE" />
     </logger>
 

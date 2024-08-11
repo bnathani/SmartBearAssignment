@@ -1,18 +1,17 @@
-package org.example.app;
+package org.smartbear.app;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.smartbear.app.BritishTimeToSpokenForm;
 import org.smartbear.exception.InvalidTimeException;
 
 
-public class BritishToSpokenFormTest {
-    BritishTimeToSpokenForm timeToSpokenForm = new BritishTimeToSpokenForm();
+public class TimeToBritishSpokenFormTest {
+    TimeToBritishSpokenForm timeToSpokenForm = new TimeToBritishSpokenForm();
 
     @Test
     public void testNoon(){
         try{
-            Assert.assertEquals("noon",timeToSpokenForm.getSpokenFormOfBritishTime("12:00"));
+            Assert.assertEquals("noon",timeToSpokenForm.getBritishSpokenFormOfTime("12:00"));
         }catch (InvalidTimeException ex){
             Assert.fail();
         }
@@ -20,7 +19,7 @@ public class BritishToSpokenFormTest {
     @Test
     public void testMidnight(){
         try{
-            Assert.assertEquals("midnight",timeToSpokenForm.getSpokenFormOfBritishTime("00:00"));
+            Assert.assertEquals("midnight",timeToSpokenForm.getBritishSpokenFormOfTime("00:00"));
         }catch (InvalidTimeException ex){
             Assert.fail();
         }
@@ -28,7 +27,7 @@ public class BritishToSpokenFormTest {
     @Test
     public void testOneOClock(){
         try{
-            Assert.assertEquals("one o'clock",timeToSpokenForm.getSpokenFormOfBritishTime("1:00"));
+            Assert.assertEquals("one o'clock",timeToSpokenForm.getBritishSpokenFormOfTime("1:00"));
         }catch (InvalidTimeException ex){
             Assert.fail();
         }
@@ -37,7 +36,7 @@ public class BritishToSpokenFormTest {
     @Test
     public void testFourFifteen(){
         try{
-            Assert.assertEquals("quarter past four",timeToSpokenForm.getSpokenFormOfBritishTime("4:15"));
+            Assert.assertEquals("quarter past four",timeToSpokenForm.getBritishSpokenFormOfTime("4:15"));
         }catch (InvalidTimeException ex){
             Assert.fail();
         }
@@ -46,7 +45,7 @@ public class BritishToSpokenFormTest {
     @Test
     public void testSixThirtyTwo(){
         try{
-            Assert.assertEquals("six thirty two",timeToSpokenForm.getSpokenFormOfBritishTime("6:32"));
+            Assert.assertEquals("six thirty two",timeToSpokenForm.getBritishSpokenFormOfTime("6:32"));
         }catch (InvalidTimeException ex){
             Assert.fail();
         }
@@ -55,7 +54,7 @@ public class BritishToSpokenFormTest {
     @Test
     public void testSevenThirty(){
         try{
-            Assert.assertEquals("half past seven",timeToSpokenForm.getSpokenFormOfBritishTime("7:30"));
+            Assert.assertEquals("half past seven",timeToSpokenForm.getBritishSpokenFormOfTime("7:30"));
         }catch (InvalidTimeException ex){
             Assert.fail();
         }
@@ -64,7 +63,7 @@ public class BritishToSpokenFormTest {
     @Test
     public void testEightForty(){
         try{
-            Assert.assertEquals("twenty to nine",timeToSpokenForm.getSpokenFormOfBritishTime("8:40"));
+            Assert.assertEquals("twenty to nine",timeToSpokenForm.getBritishSpokenFormOfTime("8:40"));
         }catch (InvalidTimeException ex){
             Assert.fail();
         }
@@ -72,7 +71,7 @@ public class BritishToSpokenFormTest {
     @Test
     public void testNineFortyFive(){
         try{
-            Assert.assertEquals("quarter to ten",timeToSpokenForm.getSpokenFormOfBritishTime("9:45"));
+            Assert.assertEquals("quarter to ten",timeToSpokenForm.getBritishSpokenFormOfTime("9:45"));
         }catch (InvalidTimeException ex){
             Assert.fail();
         }
@@ -81,7 +80,7 @@ public class BritishToSpokenFormTest {
     @Test
     public void testElevenFiftyFive(){
         try{
-            Assert.assertEquals("five to twelve",timeToSpokenForm.getSpokenFormOfBritishTime("11:55"));
+            Assert.assertEquals("five to twelve",timeToSpokenForm.getBritishSpokenFormOfTime("11:55"));
         }catch (InvalidTimeException ex){
             Assert.fail();
         }

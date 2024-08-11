@@ -10,11 +10,11 @@ public class BritishSpokenTimeApp {
     private static final Logger log = LoggerFactory.getLogger(BritishSpokenTimeApp.class);
 
     public static void main(String[] args) {
-        BritishTimeToSpokenForm timeToSpokenForm = new BritishTimeToSpokenForm();
+        TimeToBritishSpokenForm timeToSpokenForm = new TimeToBritishSpokenForm();
         String time = getUserInput();
         try{
             log.info("The entered British time is {}",time);
-            String spokenTime = timeToSpokenForm.getSpokenFormOfBritishTime(time);
+            String spokenTime = timeToSpokenForm.getBritishSpokenFormOfTime(time);
             log.info("The spoken form of british time {} is: {}",time,spokenTime);
         }catch (InvalidTimeException ex){
             log.error("Caught Exception while converting British time to spoken form. {}",ex.getMessage());
